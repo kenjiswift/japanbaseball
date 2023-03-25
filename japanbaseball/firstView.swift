@@ -8,33 +8,44 @@
 import SwiftUI
 
 struct firstView: View {
-    @State private var news = ["ニュース１","ニュース２","ニュース３","ニュース４","ニュース5"]
     var body: some View {
         NavigationView{
-            VStack{
-                Text("現在の試合状況")
-                List{
-                    FightView(teamA: "阪神", teamB: "巨人",time: "13:00")
-                    FightView(teamA: "中日", teamB: "ヤクルト",time: "13:00")
-                    FightView(teamA: "広島", teamB: "ソフトバンク",time: "13:00")
-                    FightView(teamA: "オリックス", teamB: "ライオンズ",time: "13:00")
-                }
-                Spacer()
-                
-                Text("ヘッドラインNEWS")
-                
-                List{
-                    ForEach(news, id:\.self){ new in
-                        NavigationLink(destination: DetailView(name: new)){
-                            Text(new)
-                        }
+           
+            ZStack{
+                GeometryReader{ geometry in
+                    Color(.black)
+                        .ignoresSafeArea()
+                    VStack{
+                        Text("ヘッドラインNEWS")
+                            .font(.custom("ZenAntique-Regular", size: 30))
+                            .foregroundColor(.white)
+                        ScrollView(.vertical){
+                            let news = News()
+                            newsView(imageName: news.image[0],Name: news.title[0] )
+                            newsView(imageName: news.image[1],Name: news.title[1] )
+                            newsView(imageName: news.image[2],Name: news.title[2] )
+                            newsView(imageName: news.image[3],Name: news.title[3] )
+                            newsView(imageName: news.image[4],Name: news.title[4] )
+
                     }
                 }
-                .navigationBarTitle("最新情報")
             }
         }
     }
 }
+struct NextView: View {
+    @Environment(\.dismiss) private var dismiss
+    @State private var isPresented: Bool = false
+    var body: some View {
+        Text("NextView")
+        Button {
+            dismiss()
+        } label: {
+            Text("mae")
+        }
+    }
+}
+
 
 struct firstView_Previews: PreviewProvider {
     static var previews: some View {
@@ -48,21 +59,37 @@ struct DetailView:View{
     Text(name).font(.system(size:30))
     }
 }
-struct FightView: View{
-    var teamA:String
-    var teamB:String
-    var time :String
-    var body:some View{
-        HStack{
-            Spacer()
-            Text(teamA)
-            Spacer()
-            Text(time)
-            Spacer()
-            Text(teamB)
-            Spacer()
+struct newsView: View {
+    @State private var isPresented: Bool = false
+    let imageName: String
+    let Name: String
+ 
+    var body: some View {
+        Button(action: {isPresented = true //trueにしないと画面遷移されない
+            }) {
+                ZStack{
+                    Rectangle()
+                        .stroke(lineWidth: 2)
+                        .fill(.red)
+                    VStack {
+                        HStack{
+                            Image("\(imageName)")
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                                .frame(width: 160.0, height: 120.0, alignment: .center)
+                                .clipShape(RoundedRectangle(cornerRadius: 15))
+                            Text("\(Name)")
+                                .font(.custom("ZenAntique-Regular",size:20))
+                                .foregroundColor(.white)
+                                .fontWeight(.thin)
+                                .frame(width: 200,height:140)
+                        }
+                    }
+                }
+            }
+            .fullScreenCover(isPresented: $isPresented) { //フルスクリーンの画面遷移
+                NextView()
+            }
         }
-        .font(.headline)
-        .multilineTextAlignment(.center)
     }
 }
