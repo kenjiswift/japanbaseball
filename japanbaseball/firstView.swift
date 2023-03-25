@@ -12,7 +12,6 @@ struct firstView: View {
         NavigationView{
            
             ZStack{
-                GeometryReader{ geometry in
                     Color(.black)
                         .ignoresSafeArea()
                     VStack{
@@ -20,31 +19,44 @@ struct firstView: View {
                             .font(.custom("ZenAntique-Regular", size: 30))
                             .foregroundColor(.white)
                         ScrollView(.vertical){
-                            let news = News()
-                            newsView(imageName: news.image[0],Name: news.title[0] )
-                            newsView(imageName: news.image[1],Name: news.title[1] )
-                            newsView(imageName: news.image[2],Name: news.title[2] )
-                            newsView(imageName: news.image[3],Name: news.title[3] )
-                            newsView(imageName: news.image[4],Name: news.title[4] )
-
-                    }
+                            newsView(newsNo: 0)
+                            newsView(newsNo: 1)
+                            newsView(newsNo: 2)
+                            newsView(newsNo: 3)
+                            newsView(newsNo: 4)
                 }
             }
         }
     }
 }
-struct NextView: View {
-    @Environment(\.dismiss) private var dismiss
-    @State private var isPresented: Bool = false
-    var body: some View {
-        Text("NextView")
-        Button {
-            dismiss()
-        } label: {
-            Text("mae")
+    struct NextView: View {
+        @Environment(\.dismiss) private var dismiss
+        @State private var isPresented: Bool = false
+        let newsNo:Int
+        let news = NewsData()
+        var body: some View {
+            ZStack{
+                Color(.black)
+                    .ignoresSafeArea()
+                ScrollView(.vertical){
+                    VStack{
+                        Image(news.image[newsNo])
+                        Text(news.title[newsNo])
+                        Text(news.text[newsNo])
+                            .font(.custom("ZenAntique-Regular",size:20))
+                            .foregroundColor(.white)
+                            .frame(width: 350)
+                        Button {
+                            dismiss()
+                        } label: {
+                            Text("back")
+                        }
+                    }
+                }
+            }
         }
+        
     }
-}
 
 
 struct firstView_Previews: PreviewProvider {
@@ -61,8 +73,8 @@ struct DetailView:View{
 }
 struct newsView: View {
     @State private var isPresented: Bool = false
-    let imageName: String
-    let Name: String
+    let news = NewsData()
+    let newsNo:Int
  
     var body: some View {
         Button(action: {isPresented = true //trueにしないと画面遷移されない
@@ -73,12 +85,12 @@ struct newsView: View {
                         .fill(.red)
                     VStack {
                         HStack{
-                            Image("\(imageName)")
+                            Image(news.image[newsNo])
                                 .resizable()
                                 .aspectRatio(contentMode: .fill)
                                 .frame(width: 160.0, height: 120.0, alignment: .center)
                                 .clipShape(RoundedRectangle(cornerRadius: 15))
-                            Text("\(Name)")
+                            Text(news.title[newsNo])
                                 .font(.custom("ZenAntique-Regular",size:20))
                                 .foregroundColor(.white)
                                 .fontWeight(.thin)
@@ -88,7 +100,7 @@ struct newsView: View {
                 }
             }
             .fullScreenCover(isPresented: $isPresented) { //フルスクリーンの画面遷移
-                NextView()
+                NextView(newsNo: newsNo)
             }
         }
     }
