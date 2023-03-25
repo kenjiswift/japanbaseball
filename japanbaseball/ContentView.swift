@@ -8,16 +8,52 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var selection = 0
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        TabView(selection: $selection){
+            //FirstView
+            Text("First View")
+                .font(.title)
+                .tabItem{
+                    VStack{
+                        Image(systemName: "tray.fill")
+                        Text("最新ニュース")
+                    }
+                }
+                .tag(SelectView.first)
+            
+            //SecondView
+            Text("Second View")
+                .font(.title)
+                .tabItem{
+                    VStack{
+                        Image(systemName: "paperplane")
+                        Text("選手情報")
+                    }
+                }
+                .tag(SelectView.second)
+            
+            //ThirdView
+            Text("Third View")
+                .font(.title)
+                .tabItem{
+                    VStack{
+                        Image(systemName: "tray.and.arrow.up.fill")
+                        Text("ドーム情報")
+                    }
+                }
+                .tag(SelectView.third)
         }
-        .padding()
+        
     }
 }
+
+
+enum SelectView{
+    case first,second,third
+}
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
