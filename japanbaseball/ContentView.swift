@@ -12,38 +12,38 @@ struct ContentView: View {
     
     var body: some View {
         TabView(selection: $selection){
-            //FirstView
-            Text("First View")
-                .font(.title)
+            firstView()
                 .tabItem{
-                    VStack{
-                        Image(systemName: "tray.fill")
-                        Text("最新ニュース")
-                    }
+                    Image(systemName: "tray.fill")
+                    Text("最新ニュース")
                 }
                 .tag(SelectView.first)
             
-            //SecondView
-            Text("Second View")
-                .font(.title)
+            SecondView()
                 .tabItem{
-                    VStack{
-                        Image(systemName: "paperplane")
-                        Text("選手情報")
-                    }
+                    Image(systemName: "paperplane")
+                    Text("選手情報")
                 }
                 .tag(SelectView.second)
             
-            //ThirdView
-            Text("Third View")
-                .font(.title)
+           ThirdView()
                 .tabItem{
-                    VStack{
-                        Image(systemName: "tray.and.arrow.up.fill")
-                        Text("ドーム情報")
-                    }
+                    Image(systemName: "tray.and.arrow.up.fill")
+                    Text("ドーム情報")
                 }
                 .tag(SelectView.third)
+            FourthView()
+                 .tabItem{
+                     Image(systemName: "xmark.bin.circle.fill")
+                     Text("ドーム情報")
+                 }
+                 .tag(SelectView.third)
+            FifthView()
+                 .tabItem{
+                     Image(systemName: "archivebox.fill")
+                     Text("ドーム情報")
+                 }
+                 .tag(SelectView.third)
         }
         
     }
