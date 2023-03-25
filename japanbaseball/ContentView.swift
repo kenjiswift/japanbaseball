@@ -15,43 +15,45 @@ struct ContentView: View {
             firstView()
                 .tabItem{
                     Image(systemName: "tray.fill")
-                    Text("最新ニュース")
+                    Text("最新情報")
                 }
                 .tag(SelectView.first)
             
             SecondView()
                 .tabItem{
                     Image(systemName: "paperplane")
-                    Text("選手情報")
+                    Text("球団情報")
                 }
                 .tag(SelectView.second)
             
-           ThirdView()
+            ThirdView()
                 .tabItem{
                     Image(systemName: "tray.and.arrow.up.fill")
-                    Text("ドーム情報")
+                    Text("試合実況")
+                   
                 }
                 .tag(SelectView.third)
             FourthView()
-                 .tabItem{
-                     Image(systemName: "xmark.bin.circle.fill")
-                     Text("ドーム情報")
-                 }
-                 .tag(SelectView.third)
+                .tabItem{
+                    Image(systemName: "xmark.bin.circle.fill")
+                    Text("選手情報")
+                    
+                }
+                .tag(SelectView.fourth)
             FifthView()
-                 .tabItem{
-                     Image(systemName: "archivebox.fill")
-                     Text("ドーム情報")
-                 }
-                 .tag(SelectView.third)
+                .tabItem{
+                    Image(systemName: "archivebox.fill")
+                    Text("ドーム情報")
+                }
+                .tag(SelectView.fifth)
+            
         }
-        
     }
 }
 
 
 enum SelectView{
-    case first,second,third
+    case first,second,third,fourth,fifth
 }
 
 

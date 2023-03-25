@@ -10,7 +10,7 @@ import SwiftUI
 struct SecondView: View {
     var body: some View {
         VStack{
-            Text("Second View")
+            Text("球団情報")
                 .font(.title)
         }
     }
