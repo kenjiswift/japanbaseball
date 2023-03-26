@@ -44,9 +44,8 @@ struct LogoButton: View {
     private let logo = LogoData()
     var No:Int
   
- 
     var body: some View {
-        Button(action: {isPresented = true //trueにしないと画面遷移されない
+        Button(action: {isPresented = true
             }) {
                 ZStack{
                     Rectangle()
@@ -55,7 +54,7 @@ struct LogoButton: View {
                         .frame(width: 100, height: 300, alignment: .center)
                     VStack {
                         HStack{
-                            Image(logo.imaga[No])
+                            Image(logo.image[No])
                                 .resizable()
                                 .aspectRatio(contentMode: .fill)
                                 .frame(width: 100, height: 300, alignment: .center)
@@ -66,9 +65,9 @@ struct LogoButton: View {
             }
             .fullScreenCover(isPresented: $isPresented) { //フルスクリーンの画面遷移
                 TeamView(No:No)
-            }
         }
     }
+}
 
 struct TeamView: View {
     @Environment(\.dismiss) private var dismiss
@@ -81,7 +80,7 @@ struct TeamView: View {
             Color(.black)
                 .ignoresSafeArea()
             VStack{
-                Image(logo.imaga[No])
+                Image(logo.image[No])
                     .resizable()
                     .scaledToFill()
                     .frame(width: 300,height: 300)
