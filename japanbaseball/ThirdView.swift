@@ -93,8 +93,6 @@ struct TweetView: View {
     private let data = FightData()
     private let tweet = TweetData()
   
-    
-    
     var body: some View {
         ZStack{
             Color(.black)
@@ -129,10 +127,21 @@ struct TweetView: View {
             }
             Group{
                 TextField("tweetを入力して下さい",text: $mytweet)
-                    .position(x:200,y:700)
+                    .frame(width: 250, height: 50, alignment: .leading)
+                    .position(x:180,y:700)
                     .foregroundColor(.red)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .keyboardType(.twitter)
+                Button(action: {print("")}){ Text("Tweet")}
+                    .padding()
+                    .frame(width: 80, height: 40, alignment: .center)
+                    .background(Color.green)
+                    .accentColor(Color.white)
+                    .cornerRadius(26)
+                    .shadow(color: Color.green, radius: 15, x: 0, y: 5)
+                    .position(x:350,y:700)
+                DismissButton()
+                    .position(x:200,y:750)
                 
             }
         }
