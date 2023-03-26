@@ -29,7 +29,7 @@
 球界ニュースのタイトル選択できる画面。
 ![Simulator Screen Shot - iPhone 14 Pro - 2023-03-26 at 19 06 36](https://user-images.githubusercontent.com/88150352/227769570-ebdec3f7-2df6-48f5-a269-97431089ce38.png)
 #### ニュース詳細画面
-選択したニュースの詳細を見られる。
+選択したニュースの詳細を見られる。（上から１番目、３番目実装）
 ![Simulator Screen Shot - iPhone 14 Pro - 2023-03-26 at 19 06 40](https://user-images.githubusercontent.com/88150352/227769636-249b5009-f3d7-43c1-8c0b-d5aadbae82ad.png)
 
 ### 球団情報選択画面
@@ -45,7 +45,7 @@
 ![Simulator Screen Shot - iPhone 14 Pro - 2023-03-26 at 20 29 21](https://user-images.githubusercontent.com/88150352/227772716-4742fe99-276f-43d3-997b-0c2d2a9943f4.png)
 
 #### 選手情報画面
-選手の情報が閲覧できる
+選手の情報が閲覧できる（岩崎選手のみ実装）
 ![Simulator Screen Shot - iPhone 14 Pro - 2023-03-26 at 20 49 52](https://user-images.githubusercontent.com/88150352/227773797-4b9bbb72-c3e6-4ce2-9dd6-edd3e07006df.png)
 
 
