@@ -10,7 +10,7 @@ import SwiftUI
 struct FifthView: View {
     var body: some View {
         VStack{
-            Text("FifthView")
+            Text("sonota")
                 .font(.title)
             Image(systemName: "internaldrive")
         }

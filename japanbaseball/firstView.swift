@@ -46,11 +46,7 @@ struct firstView: View {
                             .font(.custom("ZenAntique-Regular",size:20))
                             .foregroundColor(.white)
                             .frame(width: 350)
-                        Button {
-                            dismiss()
-                        } label: {
-                            Text("back")
-                        }
+                        DismissButton()
                     }
                 }
             }
