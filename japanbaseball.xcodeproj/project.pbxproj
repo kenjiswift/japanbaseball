@@ -11,7 +11,6 @@
 		BAA18BAF29CF0F3F0053745C /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = BAA18BAD29CF0F3F0053745C /* OFL.txt */; };
 		BAA18BB929CF2CDF0053745C /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA18BB829CF2CDF0053745C /* Data.swift */; };
 		BAAC87D429CFD334000E09FD /* CommonButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAC87D329CFD333000E09FD /* CommonButton.swift */; };
-		BAAC87D629D03073000E09FD /* 83215d8fd9e8cecdb4c1e1eb4de6107c_t.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = BAAC87D529D03073000E09FD /* 83215d8fd9e8cecdb4c1e1eb4de6107c_t.jpeg */; };
 		BAC2BC4629CE6714001A13D4 /* japanbaseballApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC2BC4529CE6714001A13D4 /* japanbaseballApp.swift */; };
 		BAC2BC4829CE6714001A13D4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC2BC4729CE6714001A13D4 /* ContentView.swift */; };
 		BAC2BC4A29CE6716001A13D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAC2BC4929CE6716001A13D4 /* Assets.xcassets */; };
@@ -29,7 +28,6 @@
 		BAA18BB029CF0F7B0053745C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		BAA18BB829CF2CDF0053745C /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		BAAC87D329CFD333000E09FD /* CommonButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonButton.swift; sourceTree = "<group>"; };
-		BAAC87D529D03073000E09FD /* 83215d8fd9e8cecdb4c1e1eb4de6107c_t.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 83215d8fd9e8cecdb4c1e1eb4de6107c_t.jpeg; sourceTree = "<group>"; };
 		BAC2BC4229CE6714001A13D4 /* japanbaseball.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = japanbaseball.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAC2BC4529CE6714001A13D4 /* japanbaseballApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = japanbaseballApp.swift; sourceTree = "<group>"; };
 		BAC2BC4729CE6714001A13D4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -92,7 +90,6 @@
 				BAAC87D329CFD333000E09FD /* CommonButton.swift */,
 				BAA18BB829CF2CDF0053745C /* Data.swift */,
 				BAC2BC4929CE6716001A13D4 /* Assets.xcassets */,
-				BAAC87D529D03073000E09FD /* 83215d8fd9e8cecdb4c1e1eb4de6107c_t.jpeg */,
 				BAA18BAB29CF0F3F0053745C /* Zen_Antique */,
 				BAC2BC4B29CE6716001A13D4 /* Preview Content */,
 			);
@@ -167,7 +164,6 @@
 			files = (
 				BAC2BC4D29CE6716001A13D4 /* Preview Assets.xcassets in Resources */,
 				BAA18BAE29CF0F3F0053745C /* ZenAntique-Regular.ttf in Resources */,
-				BAAC87D629D03073000E09FD /* 83215d8fd9e8cecdb4c1e1eb4de6107c_t.jpeg in Resources */,
 				BAA18BAF29CF0F3F0053745C /* OFL.txt in Resources */,
 				BAC2BC4A29CE6716001A13D4 /* Assets.xcassets in Resources */,
 			);

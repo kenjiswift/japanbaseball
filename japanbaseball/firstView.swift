@@ -10,7 +10,6 @@ import SwiftUI
 struct firstView: View {
     var body: some View {
         NavigationView{
-           
             ZStack{
                     Color(.black)
                         .ignoresSafeArea()

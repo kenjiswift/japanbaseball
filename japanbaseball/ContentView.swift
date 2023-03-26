@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var selection = 0
+    @State private var selection = 2
     
     var body: some View {
         TabView(selection: $selection){
@@ -47,7 +47,7 @@ struct ContentView: View {
             FifthView()
                 .tabItem{
                     Image(systemName: "archivebox.fill")
-                    Text("イベント情報")
+                    Text("会員証")
                 }
                 .tag(SelectView.fifth)
         }
