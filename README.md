@@ -22,7 +22,8 @@
 #### 　ツイート画面
 試合を選択すると、みんなのツイートが見れる。
 また、自分のツイートも送信できる。
-![Simulator Screen Shot - iPhone 14 Pro - 2023-03-26 at 19 07 04](https://user-images.githubusercontent.com/88150352/227769429-ee9255de-85dd-4b3e-845d-6a4ef0c5d334.png)
+![Simulator Screen Shot - iPhone 14 Pro - 2023-03-26 at 20 29 15](https://user-images.githubusercontent.com/88150352/227772750-1a12f3b5-6ff7-4108-b1d6-2f42a095f906.png)
+
 
 ### ニュースタイトル画面
 球界ニュースのタイトル選択できる画面。
@@ -41,7 +42,9 @@
 
 ### 選手選択画面
 選手を選択する画面
-![Simulator Screen Shot - iPhone 14 Pro - 2023-03-26 at 19 07 12](https://user-images.githubusercontent.com/88150352/227770053-aa894f3a-0cdb-40dc-a495-1410b388714c.png)
+![Simulator Screen Shot - iPhone 14 Pro - 2023-03-26 at 20 29 21](https://user-images.githubusercontent.com/88150352/227772716-4742fe99-276f-43d3-997b-0c2d2a9943f4.png)
+
+
 
 #### ベースボールポイント画面
 観戦する事で、ベースボールポイントが貰える。（ケンタッキーリスペクト）
